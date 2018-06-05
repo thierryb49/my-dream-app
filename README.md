@@ -31,3 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Angular.io (https://angular.io)
 Angular update (https://update.angular.io)
 Firebase (https://firebase.google.com) (https://mydreamapp-e2f96.firebaseapp.com/)
+Angular Material (https://material.angular.io/)
+- ng add @angular/material
