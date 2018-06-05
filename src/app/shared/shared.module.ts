@@ -4,6 +4,7 @@ import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { StateDirective } from './state.directive';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { StateDirective } from './state.directive';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    RouterModule
   ],
   declarations: [MyNavComponent, StateDirective],
   exports: [MyNavComponent, StateDirective]

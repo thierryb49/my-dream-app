@@ -52,3 +52,8 @@ ng build --prod --stats-json
 "bundleAnalyzer": "webpack-bundle-analyzer ./dist/my-dream-app/stats.json"
 (https://www.npmjs.com/package/webpack-bundle-analyzer)
 
+
+ROUTING
+RouterModule from @angular/Router
+
+Routing après création des components
