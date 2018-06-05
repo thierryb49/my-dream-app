@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { StateDirective } from './state.directive';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     MatIconModule,
     MatListModule
   ],
-  declarations: [MyNavComponent],
-  exports: [MyNavComponent]
+  declarations: [MyNavComponent, StateDirective],
+  exports: [MyNavComponent, StateDirective]
 })
 export class SharedModule { }

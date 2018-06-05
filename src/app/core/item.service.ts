@@ -19,8 +19,22 @@ export class ItemService {
         id: '2',
         name: 'Commande 2',
         reference: 'CMD2',
-        state: State.ALIVRER
+        state: State.ENCOURS
+      },
+      {
+        id: '3',
+        name: 'Commande 3',
+        reference: 'CMD3',
+        state: State.LIVREE
       }
     ];
+  }
+  // update item
+  update(item: Item): void {
+    this.collection.forEach((tem: Item) => {
+      if (item.id === tem.id) {
+        tem.state = item.state;
+      }
+    });
   }
 }

@@ -6,7 +6,8 @@ import { ItemComponent } from './components/item/item.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [ListItemsComponent, ItemComponent],
   exports: [ListItemsComponent]

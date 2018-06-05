@@ -1,1 +1,8 @@
-<p>{{item.id}} :: {{item.reference}} - {{item.name}} - {{item.state}}</p>
+<!--<p>{{item.id}} :: {{item.reference}} - {{item.name}} - {{item.state}}</p>-->
+
+<h3 [appState]="item.state">{{item.state}}</h3>
+<p>
+  {{item.name}}
+</p>
+<button *ngIf="state.ALIVRER === item.state" (click)="changeState(state.ENCOURS)">{{state.ENCOURS}}</button>
+<button *ngIf="state.ENCOURS === item.state" (click)="changeState(state.LIVREE)">{{state.LIVREE}}</button>

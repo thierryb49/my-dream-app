@@ -43,3 +43,12 @@ Web component (https://www.webcomponents.org/element/GoogleWebComponents/google-
 Transclusion or content projection
 - Designs pattern
 - Multi-Transclude
+
+Bundle
+ng build --stats-json
+
+ng build --prod --stats-json
+
+"bundleAnalyzer": "webpack-bundle-analyzer ./dist/my-dream-app/stats.json"
+(https://www.npmjs.com/package/webpack-bundle-analyzer)
+
