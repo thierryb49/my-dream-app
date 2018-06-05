@@ -33,4 +33,13 @@ Angular update (https://update.angular.io)
 Firebase (https://firebase.google.com) (https://mydreamapp-e2f96.firebaseapp.com/)
 Angular Material (https://material.angular.io/) (tab, Table, layout, ...)
 - ng add @angular/material
-- ng generate @angular/material:material-nav --name=my-nav
+- ng generate @angular/material:material-nav --name=my-nav (se positionner dans le rep shared)
+
+Le service Renderer2 et les directives
+
+Web component (https://www.webcomponents.org/element/GoogleWebComponents/google-youtube)
+
+
+Transclusion or content projection
+- Designs pattern
+- Multi-Transclude
