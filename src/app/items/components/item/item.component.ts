@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from '../../../shared/item.model';
 import { ItemService } from '../../../core/item.service';
 import { State } from '../../../shared/state.enum';
@@ -10,6 +10,7 @@ import { State } from '../../../shared/state.enum';
 })
 export class ItemComponent implements OnInit {
   state = State; // Enum
+  @Output() changedState: EventEmitter<Item> = new EventEmitter();
   @Input() item: Item;
   constructor(private itemservice: ItemService) { }
 
@@ -28,7 +29,9 @@ export class ItemComponent implements OnInit {
     Change State New
   */
  changeStateNew(): void {
-  let newState;
+  this.changedState.emit(this.item);
+
+  /*let newState;
   if (this.state.ALIVRER === this.item.state) {
    newState = this.state.ENCOURS;
   }
@@ -36,7 +39,7 @@ export class ItemComponent implements OnInit {
    newState = this.state.LIVREE;
   }
   this.item.state = newState;
-  this.itemservice.update(this.item);
+  this.itemservice.update(this.item);*/
 }
 
 isLivree() {
