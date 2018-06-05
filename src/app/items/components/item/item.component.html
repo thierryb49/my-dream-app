@@ -6,3 +6,5 @@
 </p>
 <button *ngIf="state.ALIVRER === item.state" (click)="changeState(state.ENCOURS)">{{state.ENCOURS}}</button>
 <button *ngIf="state.ENCOURS === item.state" (click)="changeState(state.LIVREE)">{{state.LIVREE}}</button>
+
+<button *ngIf="isLivree()" (click)="changeStateNew()">{{ newState() }}</button>

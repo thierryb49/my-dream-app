@@ -16,9 +16,35 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*
+    Change State
+  */
   changeState(state: State): void {
     this.item.state = state;
     this.itemservice.update(this.item);
   }
+
+  /*
+    Change State New
+  */
+ changeStateNew(): void {
+  let newState;
+  if (this.state.ALIVRER === this.item.state) {
+   newState = this.state.ENCOURS;
+  }
+  if (this.state.ENCOURS === this.item.state) {
+   newState = this.state.LIVREE;
+  }
+  this.item.state = newState;
+  this.itemservice.update(this.item);
+}
+
+isLivree() {
+  return this.item.state !== this.state.LIVREE;
+}
+
+newState() {
+  return (this.state.ALIVRER === this.item.state) ? this.state.ENCOURS : this.state.LIVREE;
+}
 
 }
