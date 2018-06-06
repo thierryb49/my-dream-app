@@ -65,3 +65,6 @@ Exp pour Home:
 2- Supprimer les import de HomeModule dans la app.module.ts
 3- Redéfinir les routes dans le router de HomeModule home-routing.module.ts
 {path: '**', component: HomeComponent}
+
+PRELOADING STRATEGY
+Charge les modules qd c'est possible.
