@@ -57,3 +57,5 @@ ROUTING
 RouterModule from @angular/Router
 
 Routing après création des components
+
+Lazy Loading
