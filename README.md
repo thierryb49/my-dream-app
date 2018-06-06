@@ -58,4 +58,10 @@ RouterModule from @angular/Router
 
 Routing après création des components
 
-Lazy Loading
+Lazy Loading:
+Exp pour Home: 
+1- Créer route app-routing.module.ts 
+{path: 'home', loadChildren: './home/home.module#HomeModule'}
+2- Supprimer les import de HomeModule dans la app.module.ts
+3- Redéfinir les routes dans le router de HomeModule home-routing.module.ts
+{path: '**', component: HomeComponent}
