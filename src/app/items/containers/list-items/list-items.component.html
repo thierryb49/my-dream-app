@@ -1,7 +1,5 @@
 <p>list-items works! {{itemservice.collection.length}} items</p>
-<div *ngFor="let item of itemservice.collection; index as i">
+<div *ngFor='let item of (items$ | async)'>
   <app-item [item]='item'(changedState)="changeFromParent($event)"></app-item>
 </div>
 <ng-content></ng-content>
-<ng-content select="[myAttrH1]"></ng-content>
-<ng-content select="[myAttrH2]"></ng-content>

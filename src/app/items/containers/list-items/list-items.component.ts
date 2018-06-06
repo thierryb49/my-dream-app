@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../../core/item.service';
 import { Item } from '../../../shared/item.model';
 import { State } from '../../../shared/state.enum';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-items',
@@ -9,9 +10,11 @@ import { State } from '../../../shared/state.enum';
   styleUrls: ['./list-items.component.css']
 })
 export class ListItemsComponent implements OnInit {
+  items$: Observable<Item[]>;
   constructor(public itemservice: ItemService) { }
 
   ngOnInit() {
+    this.items$ = this.itemservice.collection$;
   }
 
   changeFromParent(item: Item) {

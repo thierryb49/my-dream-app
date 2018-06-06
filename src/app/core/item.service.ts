@@ -1,13 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../shared/item.model';
+import { Item} from '../shared/item.model';
 import { State } from '../shared/state.enum';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
+  collection$: Observable<Item[]>;
+  itemCollection: AngularFirestoreCollection<Item>;
   collection: Item[];
-  constructor() {
+
+  constructor(private afs: AngularFirestore) {
+    this.itemCollection = afs.collection<Item>('collection');
+
+    // observable qui se mettra à jour automatiquement
+    this.collection$ = this.itemCollection.valueChanges();
+
     this.collection = [
       {
         id: '1',
@@ -29,12 +39,20 @@ export class ItemService {
       }
     ];
   }
-  // update item
-  update(item: Item): void {
-    this.collection.forEach((tem: Item) => {
-      if (item.id === tem.id) {
-        tem.state = item.state;
-      }
-    });
+
+  addItem(item: Item): void {
+    item.id = this.afs.createId();
+    this.itemCollection.doc(item.id).set(item)
+    .catch(error => console.log(error));
   }
+  update(item: Item): void {
+    this.itemCollection.doc(item.id).update(item)
+    .catch(error => console.log(error));
+  }
+
+  delete(item: Item): void {
+    this.itemCollection.doc(item.id).delete()
+    .catch(error => console.log(error));
+  }
+
 }

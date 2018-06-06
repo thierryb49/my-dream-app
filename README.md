@@ -93,3 +93,8 @@ Wappalyzer:  https://wappalyzer.com/
 
 
 Formulaire pilote par le template
+
+
+Cloud Firebase
+HA129Scv0VpYUIetfWFC
+npm install firebase angularfire2

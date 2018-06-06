@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { State } from '../../../shared/state.enum';
+import { ItemService } from '../../../core/item.service';
 
 @Component({
   selector: 'app-add-item',
@@ -10,7 +11,9 @@ import { State } from '../../../shared/state.enum';
 export class AddItemComponent implements OnInit {
   myForm: FormGroup;
   states = Object.values(State);
-  constructor(public fb: FormBuilder) { }
+  constructor(public fb: FormBuilder, private itemservice: ItemService) {
+
+   }
 
   ngOnInit() {
     this.createForm();
@@ -26,6 +29,7 @@ export class AddItemComponent implements OnInit {
 
   process(): void {
     console.log('form', this.myForm.value);
+    this.itemservice.addItem(this.myForm.value);
   }
 
   isError(name: string): boolean {
