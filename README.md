@@ -82,3 +82,11 @@ Operateurs: debounceTime; distinctUntilChanged; map; filter; switchMap; forkJoin
 
 Pour simuler une API :
 https://jsonplaceholder.typicode.com/
+
+
+APPLICATION EN PRODUCTION
+- https://www.commitstrip.com/fr/
+- API: https://www.themoviedb.org/
+- https://www.formation-nativo.com/home
+
+Wappalyzer:  https://wappalyzer.com/
