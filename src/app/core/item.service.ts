@@ -18,7 +18,7 @@ export class ItemService {
     // observable qui se mettra à jour automatiquement
     this.collection$ = this.itemCollection.valueChanges();
 
-    this.collection = [
+    /*this.collection = [
       {
         id: '1',
         name: 'Commande 1',
@@ -37,7 +37,7 @@ export class ItemService {
         reference: 'CMD3',
         state: State.LIVREE
       }
-    ];
+    ];*/
   }
 
   addItem(item: Item): void {
