@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListItemsComponent } from './containers/list-items/list-items.component';
 
 const itemsRoutes: Routes = [
-  {path: 'list', component: ListItemsComponent}
+  {path: '**', component: ListItemsComponent}
 ];
 
 @NgModule({
