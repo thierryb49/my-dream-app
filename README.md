@@ -68,3 +68,17 @@ Exp pour Home:
 
 PRELOADING STRATEGY
 Charge les modules qd c'est possible.
+
+OBSERVABLE
+Stackblitz (https://stackblitz.com/) Excellent pour prototyper
+https://stackblitz.com/edit/angular-vbjjkw?file=src%2Fapp%2Fbienvenue.component.ts
+
+Observable au lieu de promess
+
+http://reactivex.io/
+https://github.com/ReactiveX/rxjs
+API: https://rxjs-dev.firebaseapp.com/api
+Operateurs: debounceTime; distinctUntilChanged; map; filter; switchMap; forkJoin; tap;
+
+Pour simuler une API :
+https://jsonplaceholder.typicode.com/
