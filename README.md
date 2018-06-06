@@ -90,3 +90,6 @@ APPLICATION EN PRODUCTION
 - https://www.formation-nativo.com/home
 
 Wappalyzer:  https://wappalyzer.com/
+
+
+Formulaire pilote par le template

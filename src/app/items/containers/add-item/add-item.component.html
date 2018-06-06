@@ -1,0 +1,20 @@
+<form (ngSubmit)='process()' [formGroup]='myForm'>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Nom" formControlName="name" >
+      <div *ngIf="isError('name')"></div>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Reference" formControlName="reference">
+      <div *ngIf="isError('reference')"></div>
+  </mat-form-field>
+  <mat-form-field>
+      <mat-select placeholder="Etat de la commande" formControlName="state">
+        <mat-option *ngFor="let state of states" [value]="state">
+          {{ state }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <button mat-button type="submit" [disabled]="myForm.invalid">Ajouter</button>
+
+
+ </form>
